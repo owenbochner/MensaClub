@@ -11,23 +11,29 @@
 			<h1>Mensa Club</h1>
 		</div>
 
+        <?php
+        if(isset($_COOKIE['user'])) {
+        ?>
 		<div class="navbar">
-  			<a href="tests.html">Take Our Tests</a>
-  			<a href="#">Leader Board</a>
-  			<a href="#">About Us</a>
+  			<a href="tests.php">Take Our Tests</a>
+  			<a href="leaderboard.php">Leader Board</a>
+  			<a href="signout.php">Sign Out</a>
 		</div>
 
-		<div id="menu">
-			<center><h3>Table of Contents</h3></center>
-			<p style="text-indent: 10px;">Test Levels</p>
-			<a href="difficulty1.php" style="text-decoration:none"><p class="index">1</p></a>
-			<a href="difficulty2.php" style="text-decoration:none"><p class="index">2</p></a>
-			<a href="difficulty3.php" style="text-decoration:none"><p class="index">3</p></a>
-			<a href="difficulty4.php" style="text-decoration:none"><p class="index">4</p></a>
-			<a href="difficulty5.php" style="text-decoration:none"><p class="index">5</p></a>
-			<a href="difficulty6.php" style="text-decoration:none"><p class="index">6</p></a>
-		</div>
+        <?php
+        }
+        else {
+        ?>
 
+        <div class="navbar">
+  			<a href="signup.php">Sign Up To Take Our Tests</a>
+  			<a href="leaderboard.php">Leader Board</a>
+  			<a href="signin.php">Sign In</a>
+		</div>
+        
+        <?php
+        }
+        ?>
 
 		<div class="card">
      	 	<center><h2>CAN YOU BE A PART OF MENSA?</h2>
@@ -44,5 +50,5 @@
   
 			
 
-	</body>
+<?php include("footer.html") ?>
 	

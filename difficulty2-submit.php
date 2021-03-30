@@ -7,24 +7,25 @@ $ans3 = $_POST["q3"];
 $ans4 = $_POST["q4"];
 
 $score = 0;
-if($ans1 == "c") {
+if($ans1 == "a") {
     $score++;
 }
 
-if($ans2 == "c") {
+if($ans2 == "b") {
     $score++;
 }
 
-if($ans3 == "b") {
+if($ans3 == "c") {
     $score++;
 }
 
 if($ans4 == "d") {
     $score++;
 }
-
+// weight for diff
+$score *= 2;
 // change the value of $diff per difficulty
-$diff = 0;
+$diff = 1;
 
 
 $file = "users.txt";
@@ -53,9 +54,10 @@ file_put_contents($file, $fileUpdatedStr);
 
 ?>
 
+<p> your score on the leaderboard has been updated </p>
 <div class="landing">
     <?php
-    echo "<h2> you have finished Difficulty 1 with a score of " . $score . "</h2>"
+    echo "<h2> you have finished Difficulty 2 with a score of " . $score . "</h2>"
     ?>
 
     <p style="color:black;"> Your score on the leaderboard has been updated </p>
